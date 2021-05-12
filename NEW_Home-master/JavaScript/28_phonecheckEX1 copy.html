@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+   <style>
+       input{
+           width: 400px;
+       }
+   </style>
+   
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+<!-- js파일 import -->
+<script src="/js/joinformcopy.js"></script>
+
+
+<link rel="stylesheet" href="/css/joinfrom.css">
+
+
+        </head>
+
+<body></body>
+
+    <!-- js파일만들어서 joinfrom.js.만들기    -->
+    <h2>회원가입</h2>
+    아이디 :
+    <input type="text" id="id" onblur="idcheck()" placeholder="아이디는 6~10자리,소문자,숫자를포함하세요.">
+    <span id="id-check-result"></span> <br>
+
+    비밀번호 :
+    <input type="text" id="pw" onblur="pwdcheck()" placeholder="비밀번호는 8~16자리, 대 소문자,특수문자,숫자를포함하세요."><br>
+    <span id="pw-check-result"></span> <br>
+
+    비밀번호 확인 :
+    <input type="text" id="pw-confirm" onblur="pwdconfirm()" placeholder="비밀번호를 한번 더 입력하세요"><br>
+    <span id="pw-confirm-result"></span> <br>
+
+    전화번호 :
+    <input type="text" id="phone" onblur="phoneCheck()" placeholder="전화번호를 입력하세요 예: 010-1234-1234 "><br>
+    <span id="phone-check-result"></span> <br>
+
+    이름 :
+    <input type="text" id="name" onchange="namecheck()">
+    <span id="name-check-result"></span> <br>
+
+    이메일 :
+    <input type="text" id="email"> @ 
+    <input type="text" id="domain"><br>
+    <select id="domain-select" onchange="emailSelect(this.value)">
+        <option value="">직접입력</option>
+        <option value="gamil.com">gamil.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+    </select>
+
+    집주소를 입력해주세요 : <br><br>
+    <input type="text" id="sample4_postcode" placeholder="우편번호">
+    <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+    <input type="text" id="sample4_roadAddress" placeholder="도로명주소">
+    <input type="text" id="sample4_jibunAddress" placeholder="지번주소">
+    <span id="guide" style="color:#999;display:none"></span>
+    <input type="text" id="sample4_detailAddress" placeholder="상세주소">
+    <input type="text" id="sample4_extraAddress" placeholder="참고항목">
+
+    <button class="button">회원가입</button>
+</body>
+
+</html>
